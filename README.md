@@ -7,7 +7,7 @@ hidrantes (fachada e recalque), sprinklers, AVCB e caldeira.
 
 Site independente, sem nenhum link de/para o site principal do CAT Sertão — mas
 compartilha o **mesmo backend** (Google Apps Script) e o **mesmo login** do site
-principal ([aquinogr89/catsertao](https://github.com/aquinogr89/catsertao)): o
+principal ([aquinogr/catsertao](https://github.com/aquinogr/catsertao)): o
 mapa é público para consulta, mas **cadastrar** um ponto de OCI exige estar
 logado no site principal com um perfil autorizado (`admin_master`, `admin` ou
 `user1`). Veja a seção [Autenticação e perfis](#autenticação-e-perfis) abaixo.
@@ -92,7 +92,7 @@ Pages, que é público. Perfis:
 
 O botão **"Cadastrar OCI"** deste site verifica, no navegador, se existe uma
 sessão válida em `sessionStorage` (compartilhada com o site principal por
-estarem sob o mesmo domínio `aquinogr89.github.io`); se não houver, redireciona
+estarem sob o mesmo domínio `aquinogr.github.io`); se não houver, redireciona
 para o login do site principal. O servidor **sempre** revalida o token e o
 perfil a cada cadastro — a checagem no navegador é só para a experiência do
 usuário, não é a barreira de segurança real.

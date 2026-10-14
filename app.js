@@ -10,12 +10,12 @@ const DEFAULT_CENTER = { lat: -9.3891, lng: -40.5030 }; // Petrolina-PE
 const LOCAL_STORAGE_KEY = 'rti_catsertao_points';
 
 // Login é feito no site principal; os dois sites são publicados sob o mesmo
-// domínio (aquinogr89.github.io), então localStorage é compartilhado entre
+// domínio (aquinogr.github.io), então localStorage é compartilhado entre
 // eles independente de abrir em nova aba ou na mesma aba (ao contrário do
 // sessionStorage, que só é herdado ao "Duplicar aba" — uma aba aberta por um
 // link comum, mesmo com target="_blank", recebe sessionStorage vazio).
 const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const CATSERTAO_URL = isLocalhost ? 'http://localhost:5500/' : 'https://aquinogr89.github.io/catsertao/';
+const CATSERTAO_URL = isLocalhost ? 'http://localhost:5500/' : 'https://aquinogr.github.io/catsertao/';
 const CAT_SESSION_KEY = 'cat_session';
 const RTI_ALLOWED_PROFILES = ['admin_master', 'admin', 'user1'];
 const RTI_EDIT_PROFILES = ['admin_master', 'admin'];
@@ -57,7 +57,7 @@ function podeVisualizarLista(session) {
 // principal (perdendo o estado desta página), abre o login num popup. O
 // popup é o mesmo site principal de sempre — não precisa de nenhuma URL ou
 // parâmetro especial. Como os dois sites são a mesma origem
-// (aquinogr89.github.io), o evento "storage" dispara nesta aba assim que o
+// (aquinogr.github.io), o evento "storage" dispara nesta aba assim que o
 // popup salva a sessão no login, e a ação original (cadastrar/listar) segue
 // sozinha, sem recarregar nem navegar a página do OCI.
 let loginPopup = null;
@@ -94,7 +94,7 @@ function abrirPopupLogin(aoLogar) {
 // ===================== Logout por inatividade =====================
 // Mesma chave/lógica do catsertao/common.js (CatAuth.iniciarMonitorInatividade)
 // — repositório separado, sem acesso a esse módulo, mas lendo o mesmo
-// localStorage (mesma origem aquinogr89.github.io) o efeito é o mesmo: 30 min
+// localStorage (mesma origem aquinogr.github.io) o efeito é o mesmo: 30 min
 // sem interação em QUALQUER aba (deste site ou do catsertao) desloga todas.
 const INATIVIDADE_KEY = 'cat_last_activity';
 const INATIVIDADE_LIMITE_MS = 30 * 60 * 1000;
@@ -928,7 +928,7 @@ function ativarCarregandoBotaoEditar(btn, id) {
 
 // ===================== Botão "Listar OCI" (abre listar.html numa aba própria) =====================
 // A listagem com filtro/distância vive em listar.html, página separada — ela
-// lê a mesma sessão do localStorage (mesma origem aquinogr89.github.io), então
+// lê a mesma sessão do localStorage (mesma origem aquinogr.github.io), então
 // não precisa repassar token nenhum pela URL. Aqui só garante que o usuário
 // já está logado (com o mesmo popup de login das outras ações) antes de abrir
 // a aba, pra ela já carregar com sessão pronta.
