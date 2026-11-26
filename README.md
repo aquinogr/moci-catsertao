@@ -1,5 +1,7 @@
 # Mapa de OCI — CAT Sertão
 
+> **Aviso (25/11/2026):** As páginas públicas deste endereço (`index.html` e `listar.html`) agora redirecionam automaticamente para o **MOCI oficial** em **https://catsertao.github.io/moci-catsertao/** (preservando parâmetros como `?editar=...`). A pasta `apps-script/` (`Code.gs` e `Auth.gs`) permanece intacta como backend compartilhado do portal [`aquinogr/catsertao`](https://github.com/aquinogr/catsertao).
+
 Site estático para cadastro e visualização em mapa de pontos de Ocupações de
 Combate a Incêndio (OCI) do CAT Sertão — Centro de Atividades Técnicas do
 Sertão (CBMPE): reserva técnica de incêndio (RTI, capacidade de água),
